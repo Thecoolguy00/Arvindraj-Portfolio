@@ -1,0 +1,78 @@
+/*here the active sections are colored blue and in-active sections have their opacity decreased */
+
+
+/* Base style for sections */
+
+
+/* Styles for the active section */
+section.active {
+    background-color: #e0f7fa; /* Light blue background for active section */
+    border: 2px solid #00acc1; /* Thicker border with a highlight color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Optional styles for sections that are not active */
+
+section:not(active) {
+    opacity: 1.0; /* Slightly faded background for inactive sections */
+}
+/* Base styles for sections */
+section {
+    opacity: 1.0;
+    transform: translateY(20px); /* Move the section down slightly */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Smooth transition */
+}
+
+
+
+
+/*here's the second part of css where the animations are done when the section are active/not-active */
+/*there's still some work to do here afasdgerw */
+
+/* Active class styles */
+section.active {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move the section to its original position */
+    /* Apply animation */
+    animation: fadeIn 1s ease-out;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Base styles for nav links */
+.header nav a {
+    color: #000; /* Default color */
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Active class styles for nav links */
+.header nav a.active {
+    color: #ff5722; /* Change color when active */
+    font-weight: bold;
+}
+
+/* Optional: Add styles for when the section is not active but still in viewport */
+section.not-active {
+    opacity: 0.9;
+    /* Customize the styles if needed, such as keeping it in a faded state or any other styling */
+}
+
+/* Additional styles to ensure sections are spaced out properly */
+section {
+    margin: 50px 0; /* Add some margin between sections */
+    padding: 20px; /* Padding inside the sections */
+    background: #f0f0f0; /* Light background color */
+    border-radius: 5px; /* Rounded corners */
+}
