@@ -18,7 +18,7 @@
 
 <body>
     <header class="header">
-        <a href="#" class="logo">Arvindraj Ramesh</a>
+        <a href="#" class="logo"5>Arvindraj Ramesh</a>
 
         <nav class="navbar">
             <a href="#home" style="--i:1;" class="active">Home</a>
@@ -259,16 +259,14 @@
             </div>
         </div>
         <div class="contact-form">
-            <form action="">
-                <input type="" placeholder="Enter Your Name" required>
-                <input type="email" placeholder="Enter Your Email" required>
-
-                <input type="" placeholder="Enter Your Subject">
-                <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+            <form id="contactForm">
+                <input type="text" name="user_name" placeholder="Enter Your Name" required>
+                <input type="email" name="user_email" placeholder="Enter Your Email" required>
+                <input type="text" name="subject" placeholder="Enter Your Subject">
+                <textarea name="message" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
                 <input type="submit" value="Submit" class="send">
-
-
             </form>
+            <div id="formMessage"></div>
         </div>
     </section>
 
