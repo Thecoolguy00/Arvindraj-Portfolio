@@ -1,3 +1,23 @@
+(function() {
+    emailjs.init('service_6f5lv02'); // Replace 'YOUR_USER_ID' with your actual user ID
+})();
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('service_6f5lv02', 'template_4s354vm', this)
+        .then(function() {
+            document.getElementById('formMessage').textContent = 'Message sent successfully!';
+            document.getElementById('formMessage').style.color = 'green';
+        }, function(error) {
+            document.getElementById('formMessage').textContent = 'Failed to send message. Please try again.';
+            document.getElementById('formMessage').style.color = 'red';
+            console.error('Error:', error);
+        });
+
+    // Optional: Clear form after submission
+    this.reset();
+});
 // Initialize Typed.js for the text animation
 var typed = new Typed(".text", {
     strings: ["Frontend Developer", "Web Developer", "Graphics Editor", "Casual Gamer"],
