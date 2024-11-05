@@ -5,7 +5,7 @@
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    emailjs.sendForm('service_6f5lv02', 'template_4s354vm', this)
+    emailjs.sendForm('service_6f5lv02', 'template_41o3tfc', this)
         .then(function() {
             document.getElementById('formMessage').textContent = 'Message sent successfully!';
             document.getElementById('formMessage').style.color = 'green';
