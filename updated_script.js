@@ -1,23 +1,3 @@
-(function() {
-    emailjs.init('37lBkEtJDx7E4SIUq'); // Replace 'YOUR_USER_ID' with your actual user ID
-})();
-
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    emailjs.sendForm('service_6f5lv02', 'template_41o3tfc', this)
-        .then(function() {
-            document.getElementById('formMessage').textContent = 'Message sent successfully!';
-            document.getElementById('formMessage').style.color = 'green';
-        }, function(error) {
-            document.getElementById('formMessage').textContent = 'Failed to send message. Please try again.';
-            document.getElementById('formMessage').style.color = 'red';
-            console.error('Error:', error);
-        });
-
-    // Optional: Clear form after submission
-    this.reset();
-});
 // Initialize Typed.js for the text animation
 var typed = new Typed(".text", {
     strings: ["Frontend Developer", "Web Developer", "Graphics Editor", "Casual Gamer"],
@@ -37,11 +17,9 @@ const observerCallback = (entries) => {
         if (entry.isIntersecting) {
             // Add 'active' class when the section is in view
             entry.target.classList.add('active');
-            console.log(`'active' class added to section: `, entry.target);
         } else {
             // Remove 'active' class when the section is out of view
             entry.target.classList.remove('active');
-            console.log(`'active' class removed from section: `, entry.target);
         }
     });
 };
@@ -69,10 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateSectionVisibility() {
         if (section.classList.contains('active')) {
             section.style.visibility = 'visible';
-            console.log("Section is now visible.");
         } else {
             section.style.visibility = 'hidden';
-            console.log("Section is now hidden.");
         }
     }
 
@@ -91,6 +67,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Configure the observer to watch for changes in attributes
     if (section) {
         mutationObserver.observe(section, { attributes: true });
-        console.log("Starting to observe the section's class changes...");
     }
 });
